@@ -1,11 +1,12 @@
 import React from 'react'
 import {ThemeContextConsumer} from './themeContext';
-
+//Consumer du provider qui est dans le themeContext.jsx 
 function Button(props) {
     return(
-        <ThemeContextConsumer >
+        /* On pose les balises du Consumer*/
+        <ThemeContextConsumer > 
             {context => (
-                <button onClick={context.toggleTheme} className="button">
+                <button onClick={context.toggleTheme} className="button"> 
                     Switch
                     <span role="img" aria-label="sun">
                         🌞
@@ -17,6 +18,6 @@ function Button(props) {
             )}
         </ThemeContextConsumer>
     );
-}
+}/* context === props du provider*/
 
 export default Button;
